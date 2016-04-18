@@ -2,10 +2,13 @@ package com.flatironschool.javacs;
 
 public class HelloWorld {
     public static Double getVersion() {
-        // I won't work!
+        String version_str = System.getProperty("java.specification.version");
+        System.out.println(version_str);
+        Double version = Double.parseDouble(version_str);
+        return version;
     }
 
     public static void main(String[] args) {
-	    // you can test the output of getVersion() here
+        getVersion();
     }
 }
